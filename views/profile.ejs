@@ -1,0 +1,20 @@
+<html lang="en">
+    <%- include('modules/head.ejs')%>
+<body>
+    <%- include('modules/nav.ejs')%>
+    <div class="profile-card">
+        <div class="avatar"><img src="<%=user.picture%>" alt="profile-img"></div>
+        <div class="salutation">
+          <div class="name"><%=user.nickname%></div>
+          <div class="designation"><%=user.email%></div>
+        </div>
+        <div class="profile-bio" >
+            <form action="/profile-bio" method="post">
+                <input type="text" placeholder="Add Bio...">
+                <button type="submit"><img src="/images/send.svg" alt=""></button>
+            </form>
+        </div>
+      </div>
+      <script src="/javascripts/profile.js"></script>
+</body>
+</html>
